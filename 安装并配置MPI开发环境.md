@@ -4,22 +4,22 @@
 
 ---
 
-1 首先要保证C/C++环境已经配置完毕.
-2 在MPICH官网下载tar包.
-3 解压
+###  首先要保证C/C++环境已经配置完毕.
+###  在MPICH官网下载tar包.
+###  解压
 
 ```bash
 tar xvf mpich-3.1.2
 cd mpich-3.1.2
 ```
-4 编译并安装
+### 编译并安装
 
 ```bash
 sudo ./configure --prefix=/home/alex/mpich --enable-cxx --enable-threads=multiple --enable-sharedlibs=gcc --with-mpe --disable-f77 --disable-f90 --disable-fortran
 sudo make
 sudo make install
 ```
-5 设置MPI C/C++编译器环境变量
+### 设置MPI C/C++编译器环境变量
 
 ```bash
 sudo vim /etc/profile
@@ -28,7 +28,7 @@ export MPI_ROOT=/home/alex/mpich
 export PATH=$MPI_ROOT/bin:$PATH
 ```
 
-6 编写本地测试程序,以C++为例
+### 编写本地测试程序,以C++为例
 创建mpitest.cpp文件
 
 ```c++
