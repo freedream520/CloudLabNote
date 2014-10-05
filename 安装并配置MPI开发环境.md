@@ -10,7 +10,7 @@
 sudo apt-get install gcc
 sudo apt-get install g++
 ```
-
+<br>
 **2. 在MPICH官网下载tar包**<br><br>
 网址: http://www.mpich.org/downloads/
 
@@ -20,6 +20,7 @@ sudo apt-get install g++
 tar xvf mpich-3.1.2
 cd mpich-3.1.2
 ```
+<br>
 **4. 编译并安装**<br><br>
 
 ```bash
@@ -27,6 +28,7 @@ sudo ./configure --prefix=/home/alex/mpich --enable-cxx --enable-threads=multipl
 sudo make
 sudo make install
 ```
+<br>
 **5. 设置MPI C/C++编译器环境变量**<br><br>
 
 ```bash
@@ -35,7 +37,7 @@ sudo vim /etc/profile
 export MPI_ROOT=/home/alex/mpich
 export PATH=$MPI_ROOT/bin:$PATH
 ```
-
+<br>
 **6. 编写本地测试程序,以C++为例**<br><br>
 创建mpitest.cpp文件
 
@@ -61,6 +63,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 ```
+<br>
 编译并运行
 ```bash
 mpicxx mpitest.cpp
