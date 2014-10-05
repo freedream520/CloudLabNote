@@ -4,30 +4,30 @@
 
 ---
 
-**1. 保证C/C++环境已经配置完毕** <br>
+**1. 保证C/C++环境已经配置完毕** <br><br>
 在ubuntu系统下可以使用如下命令
 ```bash
 sudo apt-get install gcc
 sudo apt-get install g++
 ```
 
-**2. 在MPICH官网下载tar包**
+**2. 在MPICH官网下载tar包**<br><br>
 网址: http://www.mpich.org/downloads/
 
-**3. 解压**
+**3. 解压**<br><br>
 解压并进入文件
 ```bash
 tar xvf mpich-3.1.2
 cd mpich-3.1.2
 ```
-**4. 编译并安装**
+**4. 编译并安装**<br><br>
 
 ```bash
 sudo ./configure --prefix=/home/alex/mpich --enable-cxx --enable-threads=multiple --enable-sharedlibs=gcc --with-mpe --disable-f77 --disable-f90 --disable-fortran
 sudo make
 sudo make install
 ```
-**5. 设置MPI C/C++编译器环境变量**
+**5. 设置MPI C/C++编译器环境变量**<br><br>
 
 ```bash
 sudo vim /etc/profile
@@ -36,7 +36,7 @@ export MPI_ROOT=/home/alex/mpich
 export PATH=$MPI_ROOT/bin:$PATH
 ```
 
-**6. 编写本地测试程序,以C++为例**
+**6. 编写本地测试程序,以C++为例**<br><br>
 创建mpitest.cpp文件
 
 ```c++
