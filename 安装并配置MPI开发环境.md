@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 <br>
 编译并运行
 ```bash
-mpicxx mpitest.cpp
+mpicxx ./mpitest.cpp
 mpirun -np 4 ./a.out
 mpiexec -np 4 ./a.out
 ```
