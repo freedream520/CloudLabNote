@@ -36,6 +36,7 @@ sudo vim /etc/profile
 # 在文件中添加
 export MPI_ROOT=/home/alex/mpich
 export PATH=$MPI_ROOT/bin:$PATH
+source /etc/profile
 ```
 <br>
 **6. 编写本地测试程序,以C++为例**<br><br>
