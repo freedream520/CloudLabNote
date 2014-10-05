@@ -42,8 +42,8 @@ using namespace std;
 int main(int argc, char **argv) {
 
     int myid, numprocs;
-int namelen;
-char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int namelen;
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
 
     MPI_Init (&argc, &argv);
     MPI_Comm_rank (MPI_COMM_WORLD, &myid);
@@ -62,20 +62,3 @@ mpicxx mpitest.cpp
 mpirun -np 4 ./a.out
 mpiexec -np 4 ./a.out
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
