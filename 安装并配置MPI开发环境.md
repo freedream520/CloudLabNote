@@ -4,7 +4,7 @@
 
 ---
 
-**1. 保证C/C++环境已经配置完毕**
+**1. 保证C/C++环境已经配置完毕** <br>
 在ubuntu系统下可以使用如下命令
 ```bash
 sudo apt-get install gcc
