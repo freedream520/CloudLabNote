@@ -5,9 +5,17 @@
 ---
 
 ###  首先要保证C/C++环境已经配置完毕.
-###  在MPICH官网下载tar包.
-###  解压
+在ubuntu系统下可以使用如下命令
+```bash
+sudo apt-get install gcc
+sudo apt-get install g++
+```
 
+###  在MPICH官网下载tar包.
+网址: http://www.mpich.org/downloads/
+
+###  解压
+解压并进入文件
 ```bash
 tar xvf mpich-3.1.2
 cd mpich-3.1.2
