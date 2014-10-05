@@ -17,7 +17,7 @@ sudo apt-get install g++
 **3. 解压**<br><br>
 解压并进入文件
 ```bash
-tar xvf mpich-3.1.2
+tar xvf mpich-3.1.2.tar.gz
 cd mpich-3.1.2
 ```
 <br>
