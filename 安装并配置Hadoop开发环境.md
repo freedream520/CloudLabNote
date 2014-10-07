@@ -4,7 +4,7 @@
 
 ---
 
-**配置java开发和运行环境** <br><br>
+**1. 配置java开发和运行环境** <br><br>
 在ubuntu下可以使用如下命令:
 ```bash
 sudo apt-get install openjdk-7-jre-headless
@@ -26,7 +26,7 @@ java HelloWorld
 ```
 <br>
 
-**修改主机名和hosts文件** <br><br>
+**2. 修改主机名和hosts文件** <br><br>
 将主机名改为master和slave
 ```bash
 sudo vim /etc/hostname
@@ -47,11 +47,11 @@ sudo vim /etc/hosts
 ```
 <br>
 
-**设置Master免密码登陆到worker** <br><br>
+**3. 设置Master免密码登陆到worker** <br><br>
 见'SSH免密码登陆'一文
 <br>
 
-**复制Hadoop安装包到所有机器** <br><br>
+**4. 复制Hadoop安装包到所有机器** <br><br>
 下载hadoop安装包,例如hadoop-1.0.0-bin.tar.gz, 上传到master中, 在传给worker, 然后解压
 ```bash
 tar -zxvf hadoop-1.0.0-bin.tar.gz
@@ -60,4 +60,15 @@ scp hadoop-1.0.0-bin.tar.gz alex@worker02:~
 ...
 ```
 <br>
+**5. 编辑配置文件** <br><br>
+```bash
+cd hadoop-1.0.0/etc/hadoop
+vim hadoop-env.sh
+```
+
+仅需要设置**JAVA_HOME**
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+```
+
 
