@@ -48,6 +48,6 @@ sudo vim /etc/hosts
 <br>
 
 **设置Master免密码登陆到worker** <br><br>
-见<SSH免密码登陆>一文
+见'SSH免密码登陆'一文
 <br>
 
