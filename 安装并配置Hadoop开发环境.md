@@ -51,3 +51,13 @@ sudo vim /etc/hosts
 见'SSH免密码登陆'一文
 <br>
 
+**复制Hadoop安装包到所有机器** <br><br>
+下载hadoop安装包,例如hadoop-1.0.0-bin.tar.gz, 上传到master中, 在传给worker, 然后解压
+```bash
+tar -zxvf hadoop-1.0.0-bin.tar.gz
+scp hadoop-1.0.0-bin.tar.gz alex@worker01:~
+scp hadoop-1.0.0-bin.tar.gz alex@worker02:~
+...
+```
+<br>
+
