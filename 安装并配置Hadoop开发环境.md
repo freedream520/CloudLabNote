@@ -26,5 +26,28 @@ java HelloWorld
 ```
 <br>
 
+**修改主机名和hosts文件** <br><br>
+将主机名改为master和slave
+```bash
+sudo vim /etc/hostname
+```
+<br>
+例如将ubuntu07改为master,ubuntu10改为worker01<br>
+修改master的hosts文件,并拷贝到每台worker上
+```bash
+sudo vim /etc/hosts
+```
+<br>
+例如:
+```bash
+10.0.0.7 master
+10.0.0.10 slave01
+10.0.0.12 slave02
+....
+```
+<br>
 
+**设置Master免密码登陆到worker** <br><br>
+见<SSH免密码登陆>一文
+<br>
 
