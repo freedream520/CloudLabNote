@@ -65,10 +65,64 @@ scp hadoop-1.0.0-bin.tar.gz alex@worker02:~
 cd hadoop-1.0.0/etc/hadoop
 vim hadoop-env.sh
 ```
+<br>
 
-仅需要设置**JAVA_HOME**
+仅需要设置JAVA-HOME
 ```bash
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA-HOME=/usr/lib/jvm/java-7-openjdk-amd64
+```
+<br>
+
+core-site.xml:
+```bash
+<configure>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://master:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/home/</value>
+    </property>
+</configure>
+```
+<br>
+mapred-site.xml:
+```bash
+<configure>
+    <property>
+        <name>mapred.job.tracker</name>
+        <value>master:9001</value>
+    </property>
+</configure>
+```
+<br>
+
+hdfs-site.xml:
+```bash
+<configure>
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>
+</configure>
+```
+<br>
+masters:
+```bash
+master
 ```
 
+slaves:
+```bash
+worker01
+worker02
+...
+```
+<br>
 
+**6. 将配置文件拷贝到各台slave**
+```bash
+scp hadoop-env.sh core-site.xml hdfs-site.xml masters slaves alex@worker01:~/hadoop-1.0.0/etc/hadoop
+```
+<br>
