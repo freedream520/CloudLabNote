@@ -25,12 +25,3 @@ ssh worker01
 mkdir .ssh
 cat id_dsa.pub >> .ssh/authorized_keys
 ```
-<br>
-**设置.ssh目录和authorizedkeys文件的权限**
-在被登陆的每台机器上,执行如下命令:
-```bash
-chmod 755 .ssh
-chmod 600 ~/.ssh/authorized_keys
-```
-
-
