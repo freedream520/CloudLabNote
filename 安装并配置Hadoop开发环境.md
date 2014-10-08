@@ -82,7 +82,7 @@ core-site.xml:
     </property>
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>/home/</value>
+        <value>/tmp</value>
     </property>
 </configure>
 ```
@@ -103,7 +103,7 @@ hdfs-site.xml:
 <configure>
     <property>
         <name>dfs.replication</name>
-        <value>3</value>
+        <value>2</value>
     </property>
 </configure>
 ```
@@ -124,5 +124,16 @@ worker02
 **6. 将配置文件拷贝到各台slave**
 ```bash
 scp hadoop-env.sh core-site.xml hdfs-site.xml masters slaves alex@worker01:~/hadoop-1.0.0/etc/hadoop
+```
+<br>
+
+**7. 启动Hadoop** <br><br>
+```bash
+bin/hadoop namenode -format
+bin/start-all.sh
+```
+可以通过以下命令查看集群状
+```bash
+bin/hadoop dfsadmin -report
 ```
 <br>
