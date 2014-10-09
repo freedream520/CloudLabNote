@@ -78,11 +78,11 @@ mpiexec -f hosts -n 13 ./a.out
 ```
 其中hosts为服务器机器列表，例如：
 ```bash
-master : 4
-worker01 : 4
-worker02 : 4
-worker03 : 4
-worker04 : 4
+master:4
+worker01:4
+worker02:4
+worker03:4
+worker04:4
 ....
 ```
 <br>
