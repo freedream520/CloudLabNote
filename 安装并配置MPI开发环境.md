@@ -71,3 +71,19 @@ mpicxx ./mpitest.cpp
 mpirun -np 4 ./a.out
 mpiexec -np 4 ./a.out
 ```
+<br>
+在多台机器上运行可以通过以下命令
+```bash
+mpiexec -f hosts -n 13 ./a.out
+```
+其中hosts为服务器机器列表，例如：
+```bash
+master : 4
+worker01 : 4
+worker02 : 4
+worker03 : 4
+worker04 : 4
+....
+```
+<br>
+数字4为每台机器开启的进程个数
