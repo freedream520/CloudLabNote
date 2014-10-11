@@ -137,3 +137,11 @@ bin/start-all.sh
 bin/hadoop dfsadmin -report
 ```
 <br>
+
+**8. 测试**<br><br>
+上传文件到hdfs并运行示例程序
+```bash
+bin/hadoop dfs -put README.txt input
+bin/hadoop dfs -ls
+bin/hadoop jar ./hadoop-examples-1.1.2.jar wordcount input output
+```
